@@ -13,8 +13,7 @@ Ensure you have installed:
 ### ▶️ Steps to Run Project
 
 1️ Clone the repository
-```bash
-https://github.com/Praveenkrishna-21/Ecom_Frontened_.git
+git clone https://github.com/Praveenkrishna-21/Ecom_Frontened_.git
 2
 cd vite-project
 3
