@@ -1,0 +1,138 @@
+.header {
+  background-color: #815787; /* Purple theme */
+  color: #fff;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo .card-link {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Nav links alignment */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* HOME + CART Links */
+.nav-links .card-link {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 7px 12px;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.25s ease;
+}
+.nav-links .card-link:hover {
+  background-color: #B58BC0;
+  color: #fff;
+}
+
+
+/* ✅ Search Bar */
+.search-container {
+  position: relative;
+  width: 230px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 9px 36px 9px 14px;
+  border-radius: 25px;
+  border: 2px solid #d9c3dd;
+  background: #ffffff;
+  color: #333;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.search-input:hover {
+  border-color: #B58BC0;
+}
+
+/* Focus (Premium Glow) */
+.search-input:focus {
+  border-color: #8E68A9;
+  box-shadow: 0 0 4px rgba(142, 104, 169, 0.25); /* gentle soft glow */
+  outline: none;
+}
+
+.search-container {
+  width: 340px; /* Increased from 230px */
+}
+
+.search-input {
+  padding: 12px 42px 12px 16px; /* Taller + more spacious */
+  font-size: 16px; /* Slightly bigger text */
+}
+.header {
+  padding: 6px 18px; /* Reduced from 10px 20px */
+}
+
+.search-input {
+  padding: 7px 36px 7px 14px; /* Make search bar match slim header */
+  font-size: 14px;
+}
+
+.nav-links .card-link {
+  padding: 5px 10px; /* Reduce button height */
+  font-size: 0.95rem;
+}
+
+.logo .card-link {
+  font-size: 1.3rem; /* Slightly smaller logo text */
+}
+
+
+/* ✅ Responsive Fixes */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .search-container {
+    width: 90%;
+    order: 2;
+  }
+
+  .logo .card-link {
+    width: 100%;
+    text-align: center;
+    order: 1;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    order: 3;
+    gap: 12px;
+  }
+
+  .nav-links .card-link {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    background: transparent;
+  }
+}

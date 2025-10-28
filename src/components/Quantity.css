@@ -1,0 +1,41 @@
+.quantity-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  background: #f9f9f9;
+  padding: 8px 12px;
+  border-radius: 8px;
+  width: fit-content;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+}
+
+.qty-btn {
+  border: none;
+  padding: 6px 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #3498db;
+  color: white;
+  border-radius: 6px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.qty-btn:hover {
+  background: #217dbb;
+  transform: scale(1.05);
+}
+
+.qty-value {
+  min-width: 30px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.total-cost {
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+}

@@ -1,0 +1,42 @@
+.item-container {
+  padding: 40px;
+  min-height: 80vh;
+  background-color: #e7eff8; /* light background for contrast */
+}
+.cart-item-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.item-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e1e2f;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+.item-message {
+  font-size: 1.2rem;
+  color: #555;
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px;
+  max-width: 100%; /
+}
+
+.cart-item-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
