@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import CartItems from "./components/CartItems";
 import CheckoutResponse from "./components/CheckoutResponse";
@@ -8,19 +8,28 @@ import Home from './components/Home';
 import './components/Home.css';
 import ProductDetails from './components/ProductDetails';
 
-CartContext
-function App() {
-  const [isCheckoutDone, setIsCheckoutDone] = useState(false);
 
-  const [cart, setCart] = useState([]);
+function App() {
+  
+
+  const [cart, setCart] = useState(() => {
+    const savedCart = localStorage.getItem("cartItems");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+  }, [cart]);
+
   const [searchValue, setSearchValue] = useState("");
   // Toggle add/remove
+  
   const togglecarts = (prod) => {
     const exists = cart.some((fav) => fav.id === prod.id);
     if (exists) {
       setCart(cart.filter((fav) => fav.id !== prod.id));
     } else {
-      setCart([...cart, prod]);
+      setCart([...cart,  { ...prod, quantity: 1 }]);
     }
   };
 

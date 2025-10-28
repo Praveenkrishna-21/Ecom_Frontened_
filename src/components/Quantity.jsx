@@ -2,7 +2,7 @@ import { useState } from "react";
 // import { CartContext } from "./Context";
 import './Quantity.css';
 const Quantity = ({prod,onRemove,setCart}) => {
-    const [quantity,setQuantity] = useState(1);
+    const [quantity,setQuantity] = useState(prod.quantity || 1);
     // const { cart, togglecarts } = useContext(CartContext);
 
      const updateCart = (newQty) => {
@@ -12,6 +12,16 @@ const Quantity = ({prod,onRemove,setCart}) => {
       )
     );
   };
+
+//   const updateCart = (newQty) => {
+//   setCart(prev => {
+//     const updated = prev.map(item =>
+//       item.id === prod.id ? { ...item, quantity: newQty } : item
+//     );
+//     localStorage.setItem("cartItems", JSON.stringify(updated));
+//     return updated;
+//   });
+// };
    const handleIncrease = () => {
     const newQty = quantity + 1;
     setQuantity(newQty);
